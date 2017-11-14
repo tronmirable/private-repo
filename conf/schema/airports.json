@@ -1,0 +1,77 @@
+{
+  "path": "data/airports.csv",
+  "columns": [
+    {
+      "name": "id",
+      "type": "Long"
+    },
+    {
+      "name": "ident",
+      "type": "String"
+    },
+    {
+      "name": "type",
+      "type": "String"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "name": "latitude_deg",
+      "type": "BigDecimal"
+    },
+    {
+      "name": "longitude_deg",
+      "type": "BigDecimal"
+    },
+    {
+      "name": "elevation_ft",
+      "type": "Long"
+    },
+    {
+      "name": "continent",
+      "type": "String"
+    },
+    {
+      "name": "iso_country",
+      "type": "String"
+    },
+    {
+      "name": "iso_region",
+      "type": "String"
+    },
+    {
+      "name": "municipality",
+      "type": "String"
+    },
+    {
+      "name": "scheduled_service",
+      "type": "String"
+    },
+    {
+      "name": "gps_code",
+      "type": "String"
+    },
+    {
+      "name": "iata_code",
+      "type": "String"
+    },
+    {
+      "name": "local_code",
+      "type": "String"
+    },
+    {
+      "name": "home_link",
+      "type": "String"
+    },
+    {
+      "name": "wikipedia_link",
+      "type": "String"
+    },
+    {
+      "name": "keywords",
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+@import models.dto.Report
+
+@(report: Report, error: Option[String])(implicit request: MessagesRequestHeader)
+
+  @main("Reports") {
+
+    <h1>Reports</h1>
+
+    @if(error.isDefined) {
+        <div><b>@error.get</b></div>
+    }
+
+    <ul>
+        <li>
+            <div><b>Top 10 countries with highest number of airports:</b></div>
+            <ul>
+                @for(c <- report.top10CountriesHighestAirNum) {
+                <li>@c._1: @c._2</li>
+                }
+            </ul>
+        </li>
+        <li>
+            <div><b>Top 10 countries with lowest number of airports:</b></div>
+            <ul>
+                @for(c <- report.top10CountriesLowestAirNum) {
+                <li>@c._1: @c._2</li>
+                }
+            </ul>
+        </li>
+        <li>
+            <div><b>Type of runways per country:</b></div>
+            <ul>
+                @for(c <- report.runwaysTypePerCountry) {
+                <li>
+                    <div>@c._1:</div>
+                    <ul>
+                        @for(r <- c._2) {
+                        <li>@r._1: @r._2</li>
+                        }
+                    </ul>
+                </li>
+                }
+            </ul>
+        </li>
+        <li>
+            <div><b>Top 10 most common runway identifications:</b></div>
+            <ul>
+                @for(r <- report.top10MostCommonRunwaysIdent) {
+                <li>@r._1: @r._2</li>
+                }
+            </ul>
+        </li>
+    </ul>
+
+    <hr/>
+  }

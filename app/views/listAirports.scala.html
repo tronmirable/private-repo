@@ -1,0 +1,57 @@
+@import models.dto._
+@import models.forms._
+
+@(countries: Seq[Country], form: Form[AirportQueryForm.Data], error: Option[String])(implicit request: MessagesRequestHeader)
+
+  @main("Query") {
+
+    <h1>Query</h1>
+
+    <div><b>Search by:</b></div>
+    @helper.form(action = routes.ApplicationController.listAirports()) {
+        @helper.CSRF.formField
+
+        @helper.inputRadioGroup(form("searchBy"), Seq("byName" -> "Country name", "byCode" -> "Country code"), '_label -> null)
+
+        @helper.inputText(form("criteria"), 'placeholder -> "Search...", '_label -> null, '_showConstraints -> false, '_required -> false)
+
+        <button>Find airports</button>
+    }
+    <br>
+
+    @if(countries.nonEmpty) {
+        <div>Found @countries.length results</div>
+    } else {
+        <div>No results has been found</div>
+    }
+    <br>
+
+    @if(error.isDefined) {
+        <div><b>@error.get</b></div>
+    }
+
+    @if(countries.nonEmpty) {
+        @for(c <- countries) {
+            <div><b>@c.name</b></div>
+            <div>Code: @c.code</div>
+            <div><i>Airports (@c.airports.length):</i></div>
+            <ul>
+                @for(a <- c.airports) {
+                <li>
+                    <div>Identification: @a.ident</div>
+                    <div>Name: @a.name</div>
+                    <div>Type: @a.airportType</div>
+                    <div><i>Runways (@a.runways.length):</i></div>
+                    <ul>
+                        @for(r <- a.runways) {
+                        <li>Identification: @r.leIdent, Surface: @r.surface, Length: @r.lengthFt, Width: @r.widthFt, Lighted: @r.lighted, Closed: @r.closed</li>
+                        }
+                    </ul>
+                </li>
+                }
+            </ul>
+        }
+    }
+
+    <hr/>
+  }

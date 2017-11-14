@@ -1,0 +1,29 @@
+{
+  "path": "data/countries.csv",
+  "columns": [
+    {
+      "name": "id",
+      "type": "Long"
+    },
+    {
+      "name": "code",
+      "type": "String"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "name": "continent",
+      "type": "String"
+    },
+    {
+      "name": "wikipedia_link",
+      "type": "String"
+    },
+    {
+      "name": "keywords",
+      "type": "String"
+    }
+  ]
+}

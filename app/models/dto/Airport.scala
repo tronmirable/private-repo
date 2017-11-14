@@ -1,0 +1,21 @@
+package models.dto
+
+case class Airport(id: Long,
+                   ident: String,
+                   airportType: String,
+                   name: String,
+                   latitudeDeg: BigDecimal,
+                   longitudeDeg: BigDecimal,
+                   elevationFt: Option[Long],
+                   continent: String,
+                   isoCountry: String,
+                   isoRegion: String,
+                   municipality: Option[String],
+                   scheduledService: String,
+                   gpsCode: Option[String],
+                   iataCode: Option[String],
+                   localCode: Option[String],
+                   homeLink: Option[String],
+                   wikipediaLink: Option[String],
+                   keywords: Option[String],
+                   runways: List[Runway])

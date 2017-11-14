@@ -1,0 +1,22 @@
+package models.dto
+
+case class Runway(id: Long,
+                  airportRef: Long,
+                  airportIdent: String,
+                  lengthFt: Option[Long],
+                  widthFt: Option[Long],
+                  surface: Option[String],
+                  lighted: Option[Boolean],
+                  closed: Option[Boolean],
+                  leIdent: Option[String],
+                  leLatitudeDeg: Option[BigDecimal],
+                  leLongitudeDeg: Option[BigDecimal],
+                  leElevationFt: Option[Long],
+                  leHeadingDegT: Option[BigDecimal],
+                  leDisplacedThresholdFt: Option[Long],
+                  heIdent: Option[String],
+                  heLatitudeDeg: Option[BigDecimal],
+                  heLongitudeDeg: Option[BigDecimal],
+                  heElevationFt: Option[Long],
+                  heHeadingDegT: Option[BigDecimal],
+                  heDisplacedThresholdFt: Option[Long])

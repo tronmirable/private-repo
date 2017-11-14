@@ -1,0 +1,85 @@
+{
+  "path": "data/runways.csv",
+  "columns": [
+    {
+      "name": "id",
+      "type": "Long"
+    },
+    {
+      "name": "airport_ref",
+      "type": "Long"
+    },
+    {
+      "name": "airport_ident",
+      "type": "String"
+    },
+    {
+      "name": "length_ft",
+      "type": "String"
+    },
+    {
+      "name": "width_ft",
+      "type": "String"
+    },
+    {
+      "name": "surface",
+      "type": "String"
+    },
+    {
+      "name": "lighted",
+      "type": "String"
+    },
+    {
+      "name": "closed",
+      "type": "String"
+    },
+    {
+      "name": "le_ident",
+      "type": "String"
+    },
+    {
+      "name": "le_latitude_deg",
+      "type": "String"
+    },
+    {
+      "name": "le_longitude_deg",
+      "type": "String"
+    },
+    {
+      "name": "le_elevation_ft",
+      "type": "String"
+    },
+    {
+      "name": "le_heading_degT",
+      "type": "String"
+    },
+    {
+      "name": "le_displaced_threshold_ft",
+      "type": "String"
+    },
+    {
+      "name": "he_ident",
+      "type": "String"
+    },
+    {
+      "name": "he_latitude_deg",
+      "type": "String"
+    },
+    {
+      "name": "he_longitude_deg",
+      "type": "String"
+    },
+    {
+      "name": "he_elevation_ft",
+      "type": "String"
+    },
+    {
+      "name": "he_heading_degT",
+      "type": "String"
+    },
+    {
+      "name": "he_displaced_threshold_ft",
+      "type": "String"
+    }
+  ]
+}
